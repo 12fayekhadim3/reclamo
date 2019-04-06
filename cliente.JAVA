@@ -4,13 +4,13 @@ public class Cliente{
     private String nome;
     private String telefono;
     private int gradoSoddisfazione;
-    public Cliente(String id,String cognome,String nome,String telefono,int gradoSoddisfazione)
+    public Cliente(String id,String cognome,String nome,String telefono)
     {
         this.ID=id;
         this.cognome=cognome;
         this.nome=nome;
         this.telefono=telefono;
-        this.gradoSoddisfazione=gradoSoddisfazione;
+        this.gradoSoddisfazione=0;
     }
     public String getID(){
         return this.ID;
@@ -23,9 +23,6 @@ public class Cliente{
     }
     public String getTelefono(){
         return this.telefono;
-    }
-    public int getGradoSoddisfazione(){
-        return this.gradoSoddisfazione;
     }
     public void setID(String id){
         this.ID=id;
@@ -51,9 +48,11 @@ public class Cliente{
         this.telefono=c.telefono;
         this.gradoSoddisfazione=c.gradoSoddisfazione;
     }
-   
+    public int GradoSoddisfazione(){
+        return this.gradoSoddisfazione;
+    }
     public String stampa()
     {
-        return "ID: "+getID+" cognome: "+getCognome+" nome: "+getNome+" telefono: "+getTelefono+" grado di soddisfazione: "+getGradoSoddisfazione;
+        return "ID: "+getID+" cognome: "+getCognome+" nome: "+getNome+" telefono: "+getTelefono+" grado di soddisfazione: "+GradoSoddisfazione;
     }
 }
